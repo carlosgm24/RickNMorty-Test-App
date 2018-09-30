@@ -1,0 +1,24 @@
+<div class="container">
+	<div class="row">
+		<h1 class="m-auto">{{ title }}</h1>
+		<div class="d-flex col-sm-6">
+			<img class="m-auto" src="{{rickImage}}">
+		</div>
+		<div class="d-flex col-sm-6">
+			<img class="m-auto" src="{{mortyImage}}">
+		</div>
+	</div>
+</div>
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+            <h2>Rick'n'Morty Characters</h2>
+            <ul class="list-group">
+                <ng-container *ngFor="let character of characters">
+                    <a routerLink="/detalle/{{character.id}}"><li class="list-group-item">{{character.name}}</li></a>
+                </ng-container>
+            </ul>
+        </div>
+	</div>
+</div>
